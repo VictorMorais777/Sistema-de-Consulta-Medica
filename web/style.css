@@ -1,0 +1,213 @@
+/* ============================== */
+/* Base geral da página          */
+/* ============================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================== */
+/* Containers                    */
+/* ============================== */
+.container1, .container2 {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    transition: width 0.3s ease;
+}
+
+/* ============================== */
+/* Títulos da página             */
+/* ============================== */
+h1, h2, h3 {
+    color: #1e3a5f;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ============================== */
+/* Formulários                   */
+/* ============================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* ============================== */
+/* Campos de entrada             */
+/* ============================== */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ============================== */
+/* Botões padrão                 */
+/* ============================== */
+button,
+input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #27ae60;
+}
+
+/* ============================== */
+/* Botão “Consultas” (link)      */
+/* ============================== */
+.container a:last-child {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.container a:last-child:hover {
+    background-color: #27ae60;
+}
+
+/* ============================== */
+/* Botões Editar e Deletar       */
+/* ============================== */
+.botoes-acoes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-editar,
+.btn-deletar {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 90px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-editar {
+    background-color: #2ecc71;
+}
+
+.btn-editar:hover {
+    background-color: #27ae60;
+}
+
+.btn-deletar {
+    background-color: #e74c3c;
+}
+
+.btn-deletar:hover {
+    background-color: #c0392b;
+}
+
+/* ============================== */
+/* Tabela de dados               */
+/* ============================== */
+table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    table-layout: fixed;
+}
+
+/* Cabeçalho */
+th {
+    background-color: #2c80b4;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Largura fixa das colunas */
+th:nth-child(1) { width: 4%; }
+th:nth-child(2) { width: 12%; }
+th:nth-child(3) { width: 12%; }
+th:nth-child(4) { width: 14%; }
+th:nth-child(5) { width: 14%; }
+th:nth-child(6) { width: 10%; }
+th:nth-child(7) { width: 8%; }
+th:nth-child(8) { width: 10%; }
+th:nth-child(9) { width: 10%; }
+th:nth-child(10) { width: 14%; }
+th:nth-child(11) { width: 10%; }
+
+/* Células */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.93rem;
+    color: #333;
+    word-wrap: break-word;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================== */
+/* Mensagem para lista vazia     */
+/* ============================== */
+td[colspan="11"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+/* ============================== */
+/* Responsividade                */
+/* ============================== */
+@media (max-width: 768px) {
+    .container1, .container2 {
+        padding: 20px;
+        width: 95%;
+    }
+
+    table {
+        min-width: 100px;
+    }
+}

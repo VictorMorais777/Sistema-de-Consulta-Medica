@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Consulta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container1">
+    <h2>CADASTRO DE CONSULTA MÉDICA</h2>
+    <form action="ControleDAO" method="post">
+        <input type="hidden" name="op" value="CadastrarConsulta">
+
+        <label>Nome do Paciente:</label>
+        <input type="text" name="txtnome_paciente" required placeholder="Digite o nome do Paciente">
+
+        <label>CPF:</label>
+        <input type="text" name="txtcpf" required placeholder="Digite o CPF de 11 dígitos">
+
+        <label>Especialidade:</label>
+        <input type="text" name="txtespecialidade" required placeholder="Digite a Especialidade">
+
+        <label>Médico:</label>
+        <input type="text" name="txtmedico"required placeholder="Digite o nome do Médico">
+
+        <label>Data:</label>
+        <input type="date" name="txtdata" required>
+
+        <label>Hora:</label>
+        <input type="time" name="txthora" required>
+
+        <label>Tipo de Consulta:</label>
+        <select name="txttipo_consulta">
+            <option value="Presencial">Presencial</option>
+            <option value="Online">Online</option>
+            <option value="Rotina">Rotina</option>
+            <option value="Retorno">Retorno</option>
+            <option value="Urgência">Urgência</option>
+        </select>
+
+        <label>Status do Pagamento:</label>
+        <select name="txtstatus_pagamento">
+            <option value="Particular">Particular</option>
+            <option value="Convenio">Convênio</option>
+        </select>
+
+        <label>Observações:</label>
+        <textarea name="txtobservacoes" required placeholder="Medicações que está utilizando, Exames resentes , Alergias"rows="4"></textarea>
+
+        <button type="submit">CADASTRAR</button>
+    </form>
+
+    <a href="ControleDAO?op=Listar">CONSULTAS</a>
+    
+    
+</div>
+</body>
+</html>
